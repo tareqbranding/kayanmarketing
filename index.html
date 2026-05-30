@@ -61,14 +61,14 @@
       margin-inline: auto;
     }
 
-    .section { padding: 96px 0; }
+    .section { padding: 92px 0; }
 
     .nav {
       position: sticky;
       top: 0;
       z-index: 50;
       backdrop-filter: blur(18px);
-      background: rgba(247, 243, 234, .82);
+      background: rgba(247, 243, 234, .86);
       border-bottom: 1px solid var(--line);
     }
 
@@ -101,10 +101,10 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 26px;
+      gap: 22px;
       color: var(--muted);
-      font-weight: 700;
-      font-size: .95rem;
+      font-weight: 800;
+      font-size: .92rem;
     }
 
     .nav-links a { transition: .2s ease; }
@@ -152,7 +152,48 @@
       color: var(--ink);
     }
 
-    .hero { padding: 84px 0 60px; }
+    h1, h2, h3 {
+      margin: 0;
+      line-height: 1.18;
+      letter-spacing: -.035em;
+    }
+
+    h1 {
+      font-size: clamp(2.35rem, 4.4vw, 4.35rem);
+      font-weight: 900;
+      max-width: 760px;
+    }
+
+    h2 {
+      font-size: clamp(1.95rem, 3.3vw, 3.1rem);
+      font-weight: 900;
+    }
+
+    h3 {
+      font-size: 1.28rem;
+      font-weight: 900;
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: clamp(1.03rem, 1.35vw, 1.18rem);
+      margin: 24px 0 30px;
+      max-width: 690px;
+      font-weight: 600;
+    }
+
+    .section-kicker {
+      color: var(--gold);
+      font-weight: 900;
+      margin-bottom: 14px;
+    }
+
+    .text-muted {
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .hero { padding: 84px 0 58px; }
 
     .hero-grid {
       display: grid;
@@ -182,36 +223,6 @@
       border-radius: 50%;
       background: var(--gold);
       box-shadow: 0 0 0 5px rgba(201,162,74,.16);
-    }
-
-    h1, h2, h3 {
-      margin: 0;
-      line-height: 1.18;
-      letter-spacing: -.035em;
-    }
-
-    h1 {
-      font-size: clamp(2.35rem, 4.4vw, 4.35rem);
-      font-weight: 900;
-      max-width: 760px;
-    }
-
-    h2 {
-      font-size: clamp(1.95rem, 3.3vw, 3.1rem);
-      font-weight: 900;
-    }
-
-    h3 {
-      font-size: 1.28rem;
-      font-weight: 900;
-    }
-
-    .lead {
-      color: var(--muted);
-      font-size: clamp(1.03rem, 1.35vw, 1.18rem);
-      margin: 24px 0 30px;
-      max-width: 690px;
-      font-weight: 600;
     }
 
     .hero-actions {
@@ -244,17 +255,6 @@
       overflow: hidden;
     }
 
-    .hero-card::before {
-      content: "";
-      position: absolute;
-      inset: auto -15% -28% auto;
-      width: 340px;
-      height: 340px;
-      border-radius: 50%;
-      background: rgba(201,162,74,.25);
-      filter: blur(4px);
-    }
-
     .client-photo {
       position: relative;
       border-radius: 22px;
@@ -267,32 +267,6 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-    }
-
-    .floating-stat {
-      position: absolute;
-      left: 28px;
-      bottom: 28px;
-      background: rgba(28,28,28,.92);
-      color: white;
-      border-radius: 22px;
-      padding: 18px 20px;
-      box-shadow: 0 20px 45px rgba(0,0,0,.25);
-      border: 1px solid rgba(255,255,255,.12);
-    }
-
-    .floating-stat strong {
-      color: var(--gold-2);
-      font-size: 2.1rem;
-      line-height: 1;
-      display: block;
-      direction: ltr;
-      text-align: right;
-    }
-
-    .floating-stat small {
-      color: rgba(255,255,255,.75);
-      font-weight: 800;
     }
 
     .logo-strip { padding: 34px 0 54px; }
@@ -329,108 +303,20 @@
       border-radius: 18px;
       background: rgba(247,243,234,.72);
       border: 1px solid rgba(11,11,11,.06);
-      opacity: 1;
       transition: .22s ease;
     }
 
     .logo-item:hover {
-      opacity: 1;
-      transform: translateY(-2px);
+      transform: translateY(-3px);
+      box-shadow: 0 14px 30px rgba(201,162,74,.18);
+      border-color: rgba(201,162,74,.35);
+      background: rgba(255,255,255,.72);
     }
 
     .logo-item img {
       max-height: 52px;
       max-width: 100%;
       object-fit: contain;
-    }
-
-    .split {
-      display: grid;
-      grid-template-columns: .9fr 1.1fr;
-      gap: 48px;
-      align-items: start;
-    }
-
-    .section-kicker {
-      color: var(--gold);
-      font-weight: 900;
-      margin-bottom: 14px;
-    }
-
-    .text-muted {
-      color: var(--muted);
-      font-weight: 600;
-    }
-
-    .problem-card {
-      background: var(--coal);
-      color: white;
-      border-radius: var(--radius);
-      padding: 38px;
-      position: sticky;
-      top: 100px;
-      overflow: hidden;
-    }
-
-    .problem-card::after {
-      content: "كيان";
-      position: absolute;
-      inset-inline-start: -20px;
-      bottom: -38px;
-      font-size: 9rem;
-      font-weight: 900;
-      color: rgba(255,255,255,.035);
-      letter-spacing: -.08em;
-    }
-
-    .problem-list {
-      display: grid;
-      gap: 16px;
-      margin-top: 26px;
-    }
-
-    .problem-list div {
-      padding: 18px;
-      background: rgba(255,255,255,.07);
-      border: 1px solid rgba(255,255,255,.09);
-      border-radius: 20px;
-      font-weight: 800;
-    }
-
-    .service-grid,
-    .plans-grid,
-    .stats-grid,
-    .portfolio-grid {
-      display: grid;
-      gap: 18px;
-    }
-
-    .service-grid {
-      grid-template-columns: repeat(3, 1fr);
-      margin-top: 34px;
-    }
-
-    .service-card,
-    .plan-card,
-    .stat-card,
-    .work-card {
-      background: rgba(255,255,255,.55);
-      border: 1px solid rgba(11,11,11,.08);
-      border-radius: var(--radius);
-      padding: 28px;
-      box-shadow: 0 14px 40px rgba(11,11,11,.055);
-    }
-
-    .service-card .icon {
-      width: 48px;
-      height: 48px;
-      display: grid;
-      place-items: center;
-      border-radius: 16px;
-      background: var(--ink);
-      color: var(--gold-2);
-      font-weight: 900;
-      margin-bottom: 18px;
     }
 
     .dark-section {
@@ -455,19 +341,24 @@
       filter: blur(2px);
     }
 
-    .dark-section .text-muted { color: rgba(255,255,255,.68); }
+    .dark-section .lead {
+      color: rgba(255,255,255,.68);
+    }
 
     .stats-grid {
+      display: grid;
       grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
       margin-top: 34px;
       position: relative;
     }
 
     .stat-card {
       background: rgba(255,255,255,.06);
-      border-color: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.1);
       color: white;
-      box-shadow: none;
+      border-radius: var(--radius);
+      padding: 28px;
     }
 
     .stat-card strong {
@@ -487,84 +378,12 @@
       font-weight: 800;
     }
 
+    .reels-head,
     .portfolio-head {
       display: flex;
       align-items: end;
       justify-content: space-between;
       gap: 24px;
-      margin-bottom: 28px;
-    }
-
-    .filter-tabs {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .tab {
-      border: 1px solid rgba(11,11,11,.12);
-      background: rgba(255,255,255,.5);
-      padding: 10px 16px;
-      border-radius: 999px;
-      font-weight: 900;
-      cursor: pointer;
-      color: var(--muted);
-      font-family: inherit;
-    }
-
-    .tab.active {
-      background: var(--ink);
-      color: white;
-    }
-
-    .portfolio-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    .work-card {
-      padding: 12px;
-      overflow: hidden;
-    }
-
-    .work-thumb {
-      border-radius: 22px;
-      overflow: hidden;
-      aspect-ratio: 1/1;
-      background: var(--bg-2);
-    }
-
-    .work-thumb img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform .35s ease;
-    }
-
-    .work-card:hover img { transform: scale(1.04); }
-
-    .work-body {
-      padding: 18px 8px 8px;
-    }
-
-    .work-tag {
-      color: var(--gold);
-      font-weight: 900;
-      font-size: .84rem;
-    }
-
-    .work-body p {
-      margin: 8px 0 0;
-      color: var(--muted);
-      font-weight: 700;
-    }
-
-    .hidden { display: none !important; }
-
-    .reels-head {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 20px;
       margin-bottom: 28px;
     }
 
@@ -678,15 +497,112 @@
       padding: 16px 8px 6px;
     }
 
-    .reel-info h3 {
-      margin-bottom: 6px;
-    }
+    .reel-info h3 { margin-bottom: 6px; }
 
     .reel-info p {
       margin: 0;
       color: var(--muted);
       font-weight: 700;
       font-size: .95rem;
+    }
+
+    .filter-tabs {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .tab {
+      border: 1px solid rgba(11,11,11,.12);
+      background: rgba(255,255,255,.5);
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-weight: 900;
+      cursor: pointer;
+      color: var(--muted);
+      font-family: inherit;
+    }
+
+    .tab.active {
+      background: var(--ink);
+      color: white;
+    }
+
+    .portfolio-grid,
+    .service-grid,
+    .plans-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .portfolio-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .work-card,
+    .service-card,
+    .plan-card {
+      background: rgba(255,255,255,.55);
+      border: 1px solid rgba(11,11,11,.08);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: 0 14px 40px rgba(11,11,11,.055);
+    }
+
+    .work-card {
+      padding: 12px;
+      overflow: hidden;
+    }
+
+    .work-thumb {
+      border-radius: 22px;
+      overflow: hidden;
+      aspect-ratio: 1/1;
+      background: var(--bg-2);
+    }
+
+    .work-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .35s ease;
+    }
+
+    .work-card:hover img { transform: scale(1.04); }
+
+    .work-body {
+      padding: 18px 8px 8px;
+    }
+
+    .work-tag {
+      color: var(--gold);
+      font-weight: 900;
+      font-size: .84rem;
+    }
+
+    .work-body p {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .hidden { display: none !important; }
+
+    .service-grid {
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 34px;
+    }
+
+    .service-card .icon {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 16px;
+      background: var(--ink);
+      color: var(--gold-2);
+      font-weight: 900;
+      margin-bottom: 18px;
     }
 
     .plans-grid {
@@ -757,29 +673,36 @@
 
     .plan-card .btn { margin-top: auto; }
 
-    .process {
+    .split {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 14px;
-      margin-top: 34px;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 48px;
+      align-items: start;
     }
 
-    .step {
-      background: rgba(255,255,255,.55);
-      border: 1px solid rgba(11,11,11,.08);
-      border-radius: 24px;
-      padding: 24px;
+    .problem-card {
+      background: var(--coal);
+      color: white;
+      border-radius: var(--radius);
+      padding: 38px;
+      overflow: hidden;
     }
 
-    .step-num {
-      color: var(--gold);
-      font-size: 2.3rem;
-      font-weight: 900;
-      line-height: 1;
-      margin-bottom: 18px;
+    .problem-list {
+      display: grid;
+      gap: 16px;
+      margin-top: 26px;
     }
 
-    .cta {
+    .problem-list div {
+      padding: 18px;
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.09);
+      border-radius: 20px;
+      font-weight: 800;
+    }
+
+    .contact-cta {
       background: linear-gradient(145deg, var(--ink), #2A2926);
       color: white;
       border-radius: 42px;
@@ -792,7 +715,7 @@
       position: relative;
     }
 
-    .cta::after {
+    .contact-cta::after {
       content: "";
       position: absolute;
       width: 320px;
@@ -803,7 +726,7 @@
       bottom: -120px;
     }
 
-    .cta .lead {
+    .contact-cta .lead {
       color: rgba(255,255,255,.74);
       margin-bottom: 0;
     }
@@ -816,33 +739,65 @@
       position: relative;
     }
 
-    footer {
-      padding: 46px 0;
-      color: var(--muted);
-      font-weight: 800;
+    .footer {
+      background: var(--coal);
+      color: white;
+      margin-top: 40px;
+      padding: 64px 0 28px;
     }
 
-    .footer-inner {
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.25fr .8fr .9fr;
+      gap: 34px;
+      align-items: start;
+    }
+
+    .footer-logo {
+      width: 90px;
+      height: auto;
+      margin-bottom: 16px;
+      background: rgba(255,255,255,.9);
+      border-radius: 16px;
+      padding: 8px;
+    }
+
+    .footer h3 {
+      margin-bottom: 16px;
+      color: var(--gold-2);
+    }
+
+    .footer p,
+    .footer a {
+      color: rgba(255,255,255,.74);
+      font-weight: 700;
+    }
+
+    .footer-links,
+    .footer-contact {
+      display: grid;
+      gap: 10px;
+    }
+
+    .footer a:hover { color: white; }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.12);
+      margin-top: 38px;
+      padding-top: 22px;
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      gap: 20px;
+      gap: 18px;
       flex-wrap: wrap;
-      border-top: 1px solid var(--line);
-      padding-top: 26px;
+      color: rgba(255,255,255,.55);
+      font-weight: 800;
     }
-
-    .socials {
-      display: flex;
-      gap: 14px;
-    }
-
-    .socials a { color: var(--ink); }
 
     @media (max-width: 980px) {
       .hero-grid,
       .split,
-      .cta {
+      .contact-cta,
+      .footer-grid {
         grid-template-columns: 1fr;
       }
 
@@ -853,7 +808,6 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .process { grid-template-columns: repeat(2, 1fr); }
       .logos { grid-template-columns: repeat(4, 1fr); }
       .nav-links { display: none; }
       .portfolio-head, .reels-head { align-items: flex-start; flex-direction: column; }
@@ -873,16 +827,14 @@
       .service-grid,
       .plans-grid,
       .portfolio-grid,
-      .stats-grid,
-      .process {
+      .stats-grid {
         grid-template-columns: 1fr;
       }
 
       .logos { grid-template-columns: repeat(2, 1fr); }
       .hero-card { padding: 12px; }
-      .floating-stat { position: relative; left: auto; bottom: auto; margin-top: 12px; }
       .reel-card { min-width: 82vw; max-width: 82vw; }
-      .cta { padding: 36px 24px; border-radius: 30px; }
+      .contact-cta { padding: 36px 24px; border-radius: 30px; }
       .dark-section { border-radius: 30px; width: calc(100% - 12px); }
       .btn { width: 100%; }
     }
@@ -898,11 +850,13 @@
       </a>
 
       <nav class="nav-links" aria-label="روابط الموقع">
-        <a href="#services">خدماتنا</a>
-        <a href="#work">أعمالنا</a>
-        <a href="#reels">ريلز</a>
-        <a href="#plans">الخطط</a>
         <a href="#results">النتائج</a>
+        <a href="#reels">ريلز</a>
+        <a href="#posts">بوستات</a>
+        <a href="#services">خدماتنا</a>
+        <a href="#plans">الخطط</a>
+        <a href="#problem">المشكلة</a>
+        <a href="#contact">تواصل معنا</a>
       </nav>
 
       <a class="btn btn-primary" href="https://wa.me/970595921505" target="_blank" rel="noopener">تواصل معنا</a>
@@ -919,7 +873,7 @@
 
           <div class="hero-actions">
             <a class="btn btn-primary" href="https://wa.me/970595921505" target="_blank" rel="noopener">ابدأ مع كيان</a>
-            <a class="btn btn-outline" href="#work">شاهد أعمالنا</a>
+            <a class="btn btn-outline" href="#reels">شاهد أعمالنا</a>
           </div>
 
           <div class="hero-meta">
@@ -932,11 +886,6 @@
         <div class="hero-card" aria-label="عميل سعيد في مكتب كيان">
           <div class="client-photo">
             <img src="assets/client-meeting-kayan.png" alt="عميل سعيد في مكتب كيان" />
-          </div>
-
-          <div class="floating-stat">
-            <strong>$0.09</strong>
-            <small>تكلفة محادثة في حملة رسائل</small>
           </div>
         </div>
       </div>
@@ -955,73 +904,6 @@
           <div class="logo-item"><img src="assets/logo-beasts.jpg" alt="Beasts Gym" /></div>
           <div class="logo-item"><img src="assets/logo-coffee-beans.jpg" alt="Coffee Beans" /></div>
           <div class="logo-item"><img src="assets/logo-altarefi.png" alt="الطريفي" /></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container split">
-        <div class="problem-card">
-          <div class="section-kicker">المشكلة</div>
-          <h2>مشروعك قوي… لكن صفحتك لا تعكس ذلك؟</h2>
-
-          <div class="problem-list">
-            <div>منشورات عشوائية بدون خطة واضحة.</div>
-            <div>فيديوهات لا تملك فكرة توقف المشاهد.</div>
-            <div>إعلانات بدون قراءة حقيقية للنتائج.</div>
-          </div>
-        </div>
-
-        <div>
-          <div class="section-kicker">الحل</div>
-          <h2>هنا يأتي دور كيان</h2>
-          <p class="lead">نحن لا نصنع “بوستات” فقط. نساعدك على بناء حضور رقمي واضح، مرتب، ومقنع.</p>
-          <p class="text-muted">من الفكرة، إلى التصوير، إلى التصميم، إلى الإعلان، إلى قراءة النتائج — كيان تكون معك خطوة بخطوة حتى يظهر مشروعك بالشكل الذي يستحقه.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="services">
-      <div class="container">
-        <div class="section-kicker">خدماتنا</div>
-        <h2>كل ما تحتاجه صفحتك لتظهر بشكل أفضل</h2>
-
-        <div class="service-grid">
-          <article class="service-card">
-            <div class="icon">01</div>
-            <h3>صناعة المحتوى</h3>
-            <p class="text-muted">تصوير، مونتاج، ريلز، فيديوهات قصيرة، أفكار إعلانية، وسكربتات مناسبة لجمهورك.</p>
-          </article>
-
-          <article class="service-card">
-            <div class="icon">02</div>
-            <h3>إدارة الصفحات</h3>
-            <p class="text-muted">تنظيم الصفحة، كتابة المحتوى، جدولة النشر، تحسين الشكل العام، ومتابعة التفاعل.</p>
-          </article>
-
-          <article class="service-card">
-            <div class="icon">03</div>
-            <h3>الاستراتيجية</h3>
-            <p class="text-muted">خطة محتوى واضحة تناسب مشروعك، جمهورك، هدفك، والموسم الذي تعمل فيه.</p>
-          </article>
-
-          <article class="service-card">
-            <div class="icon">04</div>
-            <h3>التصميم</h3>
-            <p class="text-muted">بوستات، عروض، منشورات تعريفية، حملات موسمية، وتصاميم تحافظ على شكل احترافي ثابت.</p>
-          </article>
-
-          <article class="service-card">
-            <div class="icon">05</div>
-            <h3>الإعلانات الممولة</h3>
-            <p class="text-muted">إعداد الحملات، متابعة الأداء، تحسين النتائج، وتقارير شهرية توضّح لك ماذا يحدث.</p>
-          </article>
-
-          <article class="service-card">
-            <div class="icon">06</div>
-            <h3>أفكار الحملات</h3>
-            <p class="text-muted">نحوّل العروض والمواسم إلى أفكار محتوى قابلة للنشر، التفاعل، والبيع.</p>
-          </article>
         </div>
       </div>
     </section>
@@ -1056,11 +938,137 @@
       </div>
     </section>
 
-    <section class="section" id="work">
+    <section class="section" id="reels">
+      <div class="container">
+        <div class="reels-head">
+          <div>
+            <div class="section-kicker">ريلز وفيديوهات</div>
+            <h2>أعمال فيديو مرتبة حسب أعلى مشاهدة</h2>
+          </div>
+
+          <div class="slider-controls" aria-label="تحريك الريلز">
+            <button class="slider-btn" type="button" data-slide="next">‹</button>
+            <button class="slider-btn" type="button" data-slide="prev">›</button>
+          </div>
+        </div>
+
+        <div class="reels-slider" id="reelsSlider">
+          <a class="reel-card" href="https://www.facebook.com/share/r/17SYqtNTsW/" target="_blank" rel="noopener">
+            <div class="reel-thumb">
+              <span class="views-bubble">100K views</span>
+              <img src="assets/reel-bernardo-thief.png" alt="Bernardo Thief" />
+            </div>
+            <div class="reel-info">
+              <h3>Bernardo Thief</h3>
+              <p>ريل عالي الانتشار</p>
+            </div>
+          </a>
+
+          <a class="reel-card" href="https://www.facebook.com/reel/1883435379043168" target="_blank" rel="noopener">
+            <div class="reel-thumb">
+              <span class="views-bubble">30K views</span>
+              <img src="assets/reel-beasts-opening.png" alt="Beasts Opening Video" />
+            </div>
+            <div class="reel-info">
+              <h3>Beasts Opening Video</h3>
+              <p>ريل افتتاح للنادي</p>
+            </div>
+          </a>
+
+          <a class="reel-card" href="https://www.facebook.com/reel/1063511855976707" target="_blank" rel="noopener">
+            <div class="reel-thumb">
+              <span class="views-bubble">30K views</span>
+              <img src="assets/reel-beasts-offer.png" alt="Beasts Offer Video" />
+            </div>
+            <div class="reel-info">
+              <h3>Beasts Offer Video</h3>
+              <p>ريل عرض تسويقي</p>
+            </div>
+          </a>
+
+          <a class="reel-card" href="https://www.instagram.com/p/DSp1FnMCADp/" target="_blank" rel="noopener">
+            <div class="reel-thumb">
+              <span class="views-bubble">30K views</span>
+              <img src="assets/reel-comin-go-burger.png" alt="Comin Go Burger" />
+            </div>
+            <div class="reel-info">
+              <h3>Comin Go Burger</h3>
+              <p>فيديو برغر ومطاعم</p>
+            </div>
+          </a>
+
+          <a class="reel-card" href="https://www.facebook.com/reel/2163224191142056" target="_blank" rel="noopener">
+            <div class="reel-thumb">
+              <span class="views-bubble">20K views</span>
+              <img src="assets/reel-beasts-promo.png" alt="Beasts Promo" />
+            </div>
+            <div class="reel-info">
+              <h3>Beasts Promo</h3>
+              <p>فيديو ترويجي للنادي</p>
+            </div>
+          </a>
+
+          <a class="reel-card" href="https://www.facebook.com/share/r/1Lu61NkTBS/" target="_blank" rel="noopener">
+            <div class="reel-thumb">
+              <span class="views-bubble">20K views</span>
+              <img src="assets/reel-bernardo-atv-crash.png" alt="Bernardo ATV Crash" />
+            </div>
+            <div class="reel-info">
+              <h3>Bernardo ATV Crash</h3>
+              <p>ريل ألعاب بفكرة سريعة وممتعة</p>
+            </div>
+          </a>
+
+          <a class="reel-card" href="https://www.instagram.com/p/DScLnxRioEZ/" target="_blank" rel="noopener">
+            <div class="reel-thumb">
+              <span class="views-bubble">20K views</span>
+              <img src="assets/reel-little-italy-ice-cream.png" alt="Little Italy Ice Cream" />
+            </div>
+            <div class="reel-info">
+              <h3>Little Italy Ice Cream</h3>
+              <p>فيديو مطاعم ومنتجات</p>
+            </div>
+          </a>
+
+          <a class="reel-card" href="https://www.facebook.com/share/r/18hhn19uLd/" target="_blank" rel="noopener">
+            <div class="reel-thumb">
+              <span class="views-bubble">15K views</span>
+              <img src="assets/reel-bernardo-atv-promo.png" alt="Bernardo ATV Promo" />
+            </div>
+            <div class="reel-info">
+              <h3>Bernardo ATV Promo</h3>
+              <p>ريل ترويجي لمنتج</p>
+            </div>
+          </a>
+
+          <a class="reel-card" href="https://www.instagram.com/p/DXTdmb-AXDV/" target="_blank" rel="noopener">
+            <div class="reel-thumb">
+              <img src="assets/reel-malcement-bg.png" alt="Malcement BG Video" />
+            </div>
+            <div class="reel-info">
+              <h3>Malcement BG Video</h3>
+              <p>فيديو قصير من أعمال كيان</p>
+            </div>
+          </a>
+
+          <a class="reel-card" href="https://www.instagram.com/p/DYZfKe9EXtR/" target="_blank" rel="noopener">
+            <div class="reel-thumb">
+              <img src="assets/reel-malcement-henson.png" alt="Malcement Henson Video" />
+            </div>
+            <div class="reel-info">
+              <h3>Malcement Henson Video</h3>
+              <p>فيديو قصير من أعمال كيان</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="posts">
       <div class="container">
         <div class="portfolio-head">
           <div>
-            <div class="section-kicker">أعمالنا</div>
+            <div class="section-kicker">بوستات وتصاميم</div>
             <h2>نماذج من البورتفوليو</h2>
           </div>
 
@@ -1157,130 +1165,47 @@
       </div>
     </section>
 
-    <section class="section" id="reels">
+    <section class="section" id="services">
       <div class="container">
-        <div class="reels-head">
-          <div>
-            <div class="section-kicker">ريلز وفيديوهات</div>
-            <h2>أعمال فيديو مع نتائج واضحة</h2>
-          </div>
+        <div class="section-kicker">خدماتنا</div>
+        <h2>كل ما تحتاجه صفحتك لتظهر بشكل أفضل</h2>
 
-          <div class="slider-controls" aria-label="تحريك الريلز">
-            <button class="slider-btn" type="button" data-slide="next">‹</button>
-            <button class="slider-btn" type="button" data-slide="prev">›</button>
-          </div>
-        </div>
+        <div class="service-grid">
+          <article class="service-card">
+            <div class="icon">01</div>
+            <h3>صناعة المحتوى</h3>
+            <p class="text-muted">تصوير، مونتاج، ريلز، فيديوهات قصيرة، أفكار إعلانية، وسكربتات مناسبة لجمهورك.</p>
+          </article>
 
-        <div class="reels-slider" id="reelsSlider">
-          <a class="reel-card" href="https://www.instagram.com/p/DXTdmb-AXDV/" target="_blank" rel="noopener">
-            <div class="reel-thumb">
-              <span class="views-bubble">Instagram</span>
-              <img src="assets/reel-malcement-bg.png" alt="Malcement BG Video" />
-            </div>
-            <div class="reel-info">
-              <h3>Malcement BG Video</h3>
-              <p>فيديو قصير من أعمال كيان</p>
-            </div>
-          </a>
+          <article class="service-card">
+            <div class="icon">02</div>
+            <h3>إدارة الصفحات</h3>
+            <p class="text-muted">تنظيم الصفحة، كتابة المحتوى، جدولة النشر، تحسين الشكل العام، ومتابعة التفاعل.</p>
+          </article>
 
-          <a class="reel-card" href="https://www.instagram.com/p/DYZfKe9EXtR/" target="_blank" rel="noopener">
-            <div class="reel-thumb">
-              <span class="views-bubble">Instagram</span>
-              <img src="assets/reel-malcement-henson.png" alt="Malcement Henson Video" />
-            </div>
-            <div class="reel-info">
-              <h3>Malcement Henson Video</h3>
-              <p>فيديو قصير من أعمال كيان</p>
-            </div>
-          </a>
+          <article class="service-card">
+            <div class="icon">03</div>
+            <h3>الاستراتيجية</h3>
+            <p class="text-muted">خطة محتوى واضحة تناسب مشروعك، جمهورك، هدفك، والموسم الذي تعمل فيه.</p>
+          </article>
 
-          <a class="reel-card" href="https://www.facebook.com/reel/1883435379043168" target="_blank" rel="noopener">
-            <div class="reel-thumb">
-              <span class="views-bubble">30K views</span>
-              <img src="assets/reel-beasts-opening.png" alt="Beasts Opening Video" />
-            </div>
-            <div class="reel-info">
-              <h3>Beasts Opening Video</h3>
-              <p>ريل افتتاح للنادي</p>
-            </div>
-          </a>
+          <article class="service-card">
+            <div class="icon">04</div>
+            <h3>التصميم</h3>
+            <p class="text-muted">بوستات، عروض، منشورات تعريفية، حملات موسمية، وتصاميم تحافظ على شكل احترافي ثابت.</p>
+          </article>
 
-          <a class="reel-card" href="https://www.facebook.com/reel/1063511855976707" target="_blank" rel="noopener">
-            <div class="reel-thumb">
-              <span class="views-bubble">30K views</span>
-              <img src="assets/reel-beasts-offer.png" alt="Beasts Offer Video" />
-            </div>
-            <div class="reel-info">
-              <h3>Beasts Offer Video</h3>
-              <p>ريل عرض تسويقي</p>
-            </div>
-          </a>
+          <article class="service-card">
+            <div class="icon">05</div>
+            <h3>الإعلانات الممولة</h3>
+            <p class="text-muted">إعداد الحملات، متابعة الأداء، تحسين النتائج، وتقارير شهرية توضّح لك ماذا يحدث.</p>
+          </article>
 
-          <a class="reel-card" href="https://www.facebook.com/reel/2163224191142056" target="_blank" rel="noopener">
-            <div class="reel-thumb">
-              <span class="views-bubble">20K views</span>
-              <img src="assets/reel-beasts-promo.png" alt="Beasts Promo" />
-            </div>
-            <div class="reel-info">
-              <h3>Beasts Promo</h3>
-              <p>فيديو ترويجي للنادي</p>
-            </div>
-          </a>
-
-          <a class="reel-card" href="https://www.facebook.com/share/r/1Lu61NkTBS/" target="_blank" rel="noopener">
-            <div class="reel-thumb">
-              <span class="views-bubble">20K views</span>
-              <img src="assets/reel-bernardo-atv-crash.png" alt="Bernardo ATV Crash" />
-            </div>
-            <div class="reel-info">
-              <h3>Bernardo ATV Crash</h3>
-              <p>ريل ألعاب بفكرة سريعة وممتعة</p>
-            </div>
-          </a>
-
-          <a class="reel-card" href="https://www.facebook.com/share/r/17SYqtNTsW/" target="_blank" rel="noopener">
-            <div class="reel-thumb">
-              <span class="views-bubble">100K views</span>
-              <img src="assets/reel-bernardo-thief.png" alt="Bernardo Thief" />
-            </div>
-            <div class="reel-info">
-              <h3>Bernardo Thief</h3>
-              <p>ريل عالي الانتشار</p>
-            </div>
-          </a>
-
-          <a class="reel-card" href="https://www.facebook.com/share/r/18hhn19uLd/" target="_blank" rel="noopener">
-            <div class="reel-thumb">
-              <span class="views-bubble">15K views</span>
-              <img src="assets/reel-bernardo-atv-promo.png" alt="Bernardo ATV Promo" />
-            </div>
-            <div class="reel-info">
-              <h3>Bernardo ATV Promo</h3>
-              <p>ريل ترويجي لمنتج</p>
-            </div>
-          </a>
-
-          <a class="reel-card" href="https://www.instagram.com/p/DScLnxRioEZ/" target="_blank" rel="noopener">
-            <div class="reel-thumb">
-              <span class="views-bubble">20K views</span>
-              <img src="assets/reel-little-italy-ice-cream.png" alt="Little Italy Ice Cream" />
-            </div>
-            <div class="reel-info">
-              <h3>Little Italy Ice Cream</h3>
-              <p>فيديو مطاعم ومنتجات</p>
-            </div>
-          </a>
-
-          <a class="reel-card" href="https://www.instagram.com/p/DSp1FnMCADp/" target="_blank" rel="noopener">
-            <div class="reel-thumb">
-              <span class="views-bubble">30K views</span>
-              <img src="assets/reel-comin-go-burger.png" alt="Comin Go Burger" />
-            </div>
-            <div class="reel-info">
-              <h3>Comin Go Burger</h3>
-              <p>فيديو برغر ومطاعم</p>
-            </div>
-          </a>
+          <article class="service-card">
+            <div class="icon">06</div>
+            <h3>أفكار الحملات</h3>
+            <p class="text-muted">نحوّل العروض والمواسم إلى أفكار محتوى قابلة للنشر، التفاعل، والبيع.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -1337,68 +1262,78 @@
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="section-kicker">طريقة العمل</div>
-        <h2>كيف نبدأ؟</h2>
+    <section class="section" id="problem">
+      <div class="container split">
+        <div class="problem-card">
+          <div class="section-kicker">المشكلة</div>
+          <h2>مشروعك قوي… لكن صفحتك لا تعكس ذلك؟</h2>
 
-        <div class="process">
-          <article class="step">
-            <div class="step-num">01</div>
-            <h3>نفهم مشروعك</h3>
-            <p class="text-muted">نراجع صفحتك، جمهورك، خدماتك، وطريقة ظهورك الحالية.</p>
-          </article>
+          <div class="problem-list">
+            <div>منشورات عشوائية بدون خطة واضحة.</div>
+            <div>فيديوهات لا تملك فكرة توقف المشاهد.</div>
+            <div>إعلانات بدون قراءة حقيقية للنتائج.</div>
+          </div>
+        </div>
 
-          <article class="step">
-            <div class="step-num">02</div>
-            <h3>نضع الخطة</h3>
-            <p class="text-muted">نحدد نوع المحتوى، الأفكار، الرسائل، وأهداف الشهر.</p>
-          </article>
-
-          <article class="step">
-            <div class="step-num">03</div>
-            <h3>ننتج المحتوى</h3>
-            <p class="text-muted">تصوير، مونتاج، تصميم، وكتابة محتوى مناسب للمنصة.</p>
-          </article>
-
-          <article class="step">
-            <div class="step-num">04</div>
-            <h3>ننشر ونعلن</h3>
-            <p class="text-muted">نرتب الصفحة، ننشر المحتوى، ونشغل الإعلانات عند الحاجة.</p>
-          </article>
-
-          <article class="step">
-            <div class="step-num">05</div>
-            <h3>نراجع ونطور</h3>
-            <p class="text-muted">نتابع النتائج ونحسن الخطة بناءً على الأداء.</p>
-          </article>
+        <div>
+          <div class="section-kicker">الحل</div>
+          <h2>هنا يأتي دور كيان</h2>
+          <p class="lead">نحن لا نصنع “بوستات” فقط. نساعدك على بناء حضور رقمي واضح، مرتب، ومقنع.</p>
+          <p class="text-muted">من الفكرة، إلى التصوير، إلى التصميم، إلى الإعلان، إلى قراءة النتائج — كيان تكون معك خطوة بخطوة حتى يظهر مشروعك بالشكل الذي يستحقه.</p>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container cta">
+    <section class="section" id="contact">
+      <div class="container contact-cta">
         <div>
           <h2>جاهز تخلي صفحتك تشتغل بشكل أفضل؟</h2>
           <p class="lead">احجز جلسة بسيطة مع كيان، ونشوف كيف ممكن نطور حضور مشروعك ونحوّل محتواك إلى أداة حقيقية لجذب العملاء.</p>
         </div>
 
         <div class="cta-actions">
-          <a class="btn btn-gold" href="https://wa.me/970595921505" target="_blank" rel="noopener">تواصل واتساب</a>
-          <a class="btn btn-light" href="https://www.instagram.com/kayan.marketing.co/" target="_blank" rel="noopener">إنستغرام</a>
+          <a class="btn btn-gold" href="https://wa.me/970595921505" target="_blank" rel="noopener">واتساب</a>
+          <a class="btn btn-light" href="mailto:tareqbranding@gmail.com">إيميل</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="container footer-inner">
-      <div>© <span id="year"></span> كيان للتسويق. جميع الحقوق محفوظة.</div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img class="footer-logo" src="assets/logo.png" alt="شعار كيان" />
+          <h3>كيان للتسويق</h3>
+          <p>نساعد المشاريع المحلية على بناء حضور رقمي واضح، مرتب، ومقنع من خلال المحتوى، الإدارة، الاستراتيجية، والإعلانات.</p>
+        </div>
 
-      <div class="socials">
-        <a href="https://www.instagram.com/kayan.marketing.co/" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://www.facebook.com/profile.php?id=61580977025771" target="_blank" rel="noopener">Facebook</a>
-        <a href="https://wa.me/970595921505" target="_blank" rel="noopener">WhatsApp</a>
+        <div>
+          <h3>روابط سريعة</h3>
+          <div class="footer-links">
+            <a href="#results">النتائج</a>
+            <a href="#reels">ريلز وفيديوهات</a>
+            <a href="#posts">بوستات وتصاميم</a>
+            <a href="#services">خدماتنا</a>
+            <a href="#plans">الخطط</a>
+            <a href="#problem">المشكلة والحل</a>
+          </div>
+        </div>
+
+        <div>
+          <h3>تواصل معنا</h3>
+          <div class="footer-contact">
+            <a href="https://wa.me/970595921505" target="_blank" rel="noopener">واتساب: +970595921505</a>
+            <a href="mailto:tareqbranding@gmail.com">tareqbranding@gmail.com</a>
+            <a href="https://www.instagram.com/kayan.marketing.co/" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.facebook.com/profile.php?id=61580977025771" target="_blank" rel="noopener">Facebook</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> كيان للتسويق. جميع الحقوق محفوظة.</span>
+        <span>صناعة محتوى | إدارة صفحات | إعلانات ممولة</span>
       </div>
     </div>
   </footer>
